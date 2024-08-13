@@ -1,0 +1,74 @@
+# ____                  _   
+#|  _ \ _   _ _ __  ___| |_ 
+#| | | | | | | '_ \/ __| __|
+#| |_| | |_| | | | \__ \ |_ 
+#|____/ \__,_|_| |_|___/\__|
+# 
+# Author: Aaron Gobeyn
+# Date: August 13th 2024
+# Documentation: https://github.com/dunst-project/dunst/blob/master/docs/dunst.5.pod
+
+[global] 
+follow = none
+width = 300
+height = 60
+origin = bottom-right
+offset = (0,0)
+indicate_hidden = yes
+shrink = no
+transparency = 0
+notification_height = 0
+separator_height = 2
+padding = 8
+horizontal_padding = 8
+frame_width = 1
+frame_color = "#3e8fb0"
+sort = yes
+idle_threshold = 0 
+font = DaddyTimeMono Nerd Font
+line-height = 0
+markup = full
+# Message format:
+# %a - appname
+# %s - summary
+# %b - body
+# %i - iconname (with path)
+# %I - iconname (without path)
+# %p - progress value (if set)
+# %n - progress value no extra characters
+# %% - literal %
+format = "<b>%a</b>\n<i>%s</i>\n%b"
+alignment = center
+vertical_alignment = center
+# Show age of message if message is older than x seconds
+show_age_threshold = -1
+word_wrap = no
+ellipsize = middle
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = true
+show_indicators = no 
+icon_position = off
+history_length = 20 
+dmenu = /usr/bin/dmenu -p dunst:
+browser = /usr/bin/firefox -new-tab
+always_run_script = true
+title = Dunst
+class = Dunst
+startup_notification = false
+verbosity = mesg
+corner_radius = 15
+ignore_dbusclose = false
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = do_action
+
+[urgency_normal]
+background = "#393552"
+foreground = "#f6c177"
+timeout = 5
+
+[urgency_critical]
+background = "#eb6f92"
+foreground = "#c4a7e7"
+timeout = 0

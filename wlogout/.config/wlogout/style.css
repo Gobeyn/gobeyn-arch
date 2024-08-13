@@ -1,0 +1,95 @@
+/*__        ___                         _   */
+/*\ \      / / | ___   __ _  ___  _   _| |_ */
+/* \ \ /\ / /| |/ _ \ / _` |/ _ \| | | | __|*/
+/*  \ V  V / | | (_) | (_| | (_) | |_| | |_ */
+/*   \_/\_/  |_|\___/ \__, |\___/ \__,_|\__|*/
+/*                    |___/                 */
+/*Author: Aaron Gobeyn*/
+/*Date: August 13th 2024*/
+/*Documentation: https://github.com/ArtsyMacaw/wlogout*/
+
+/*Import Pywal colors*/
+/*This is a direct filepath and can be user dependent!*/
+@import url("file:///home/aaron/.cache/wal/colors-waybar.css");
+
+/*------------------------------
+* General settings
+* ------------------------------*/
+
+* {
+  font-family: "JetBrainsMono Nerd Font, JetBransMonoNF";
+  background-image: none;
+  box-shadow: none;
+  transition: 20ms;
+}
+
+window {
+  background: url("file:///home/aaron/.config/wallpapers/Interstellar-Blackhole-Noise-Blurred.png");
+  background-size: cover;
+}
+
+button {
+  color: #f3e5ab;
+  font-size: 24px;
+  padding-bottom: 30px;
+
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 25%;
+
+  border-style: solid;
+  background-color: rgba(40, 40, 43, 0.7);
+  border: 3px solid #f3e5ab;
+}
+
+button:focus,
+button:active,
+button:hover {
+  color: #f3e5ab;
+  background-color: rgba(40, 40, 43, 0.9);
+  border: 3px solid @color1;
+}
+
+/*------------------------------
+* Button settings
+* ------------------------------*/
+
+#lock {
+  background-image: image(url("/home/aaron/.config/wlogout/icons/lock.png"));
+  margin: 10px;
+  border-radius: 20px;
+}
+
+#logout {
+  background-image: image(url("/home/aaron/.config/wlogout/icons/logout.png"));
+  margin: 10px;
+  border-radius: 20px;
+}
+
+#suspend {
+  background-image: image(url("/home/aaron/.config/wlogout/icons/suspend.png"));
+  margin: 10px;
+  border-radius: 20px;
+}
+
+#hibernate {
+  background-image: image(
+    url("/home/aaron/.config/wlogout/icons/hibernate.png")
+  );
+  margin: 10px;
+  border-radius: 20px;
+}
+
+#shutdown {
+  background-image: image(
+    url("/home/aaron/.config/wlogout/icons/shutdown.png")
+  );
+  margin: 10px;
+  border-radius: 20px;
+}
+
+#reboot {
+  background-image: image(url("/home/aaron/.config/wlogout/icons/reboot.png"));
+  margin: 10px;
+  border-radius: 20px;
+}
