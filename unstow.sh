@@ -9,7 +9,6 @@ directories=(
   "kitty"
   "mpv"
   "nvim"
-  "sddm"
   "waybar"
   "wlogout"
   "zathura"

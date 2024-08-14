@@ -166,3 +166,8 @@ still use the older `X11` compositor. Keep this in mind when installing
 programs, it may occasionally be required to add additional flags 
 for the programs to render correctly (for example `spotify-launcher`).
 
+### Symlink issues
+
+If something went wrong during the creation of symlinks with `stow`, you can run the `unstow.sh` script to undo the symlinks executed by 
+`stow-dotfiles.sh`
+
