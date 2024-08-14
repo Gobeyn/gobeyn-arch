@@ -37,6 +37,7 @@ PACKAGES=(
   "texlive"
   "thefuck"
   "ttf-daddytime-mono-nerd"
+  "udisks2"
   "unzip"
   "waybar"
   "wireplumber"

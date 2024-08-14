@@ -171,3 +171,27 @@ for the programs to render correctly (for example `spotify-launcher`).
 If something went wrong during the creation of symlinks with `stow`, you can run the `unstow.sh` script to undo the symlinks executed by 
 `stow-dotfiles.sh`
 
+### Connecting to Bluetooth devices
+
+We have not used this yet, so we'll refer to the 
+[Arch wiki](https://wiki.archlinux.org/title/Bluetooth).
+
+### Mounting external storage devices
+
+In order to move files from and to a USB device, external hard drive, etc.
+we need to mount the device first. The tool we use for this is 
+`udisksctl`, see the [Arch wiki](https://wiki.archlinux.org/title/Udisks).
+To mount the device we run:
+```
+udisksctl mount -b /dev/sdxy
+```
+where `sdxy` is the typical format for an external storage device where 
+`xy` will vary. To find what we should fill in exactly, we can use 
+`lsblk`, which will list the available storage devices. Once the device 
+is mounted, a file path will be shown where the contents of the 
+storage device can be accessed and information can be written to. When 
+you are finished using the device, it is important that you unmount it 
+first with:
+```
+udisksctl unmount -b /dev/sdxy
+```
