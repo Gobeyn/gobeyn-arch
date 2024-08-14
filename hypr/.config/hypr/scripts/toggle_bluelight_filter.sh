@@ -8,10 +8,11 @@ BLUELIGHT_SHADER="$HOME/.config/hypr/shaders/blue-shader.frag"
 CURRENT_SHADER=$(cat "$HOME/.shader.info")
 
 # Determine which shader to switch to
-if [ "$CURRENT_SHADER" == "$DEFAULT" ]; then
-    NEW_SHADER="$BLUELIGHT"
+
+if [ "$CURRENT_SHADER" == "$DEFAULT_SHADER" ]; then
+    NEW_SHADER="$BLUELIGHT_SHADER"
 else
-    NEW_SHADER="$DEFAULT"
+    NEW_SHADER="$DEFAULT_SHADER"
 fi
 
 # Set the new shader
@@ -21,4 +22,4 @@ hyprctl keyword decoration:screen_shader "$NEW_SHADER"
 echo "$NEW_SHADER" > "$HOME/.shader.info"
 
 # Send a notification
-notify-send "Shader switched" "Current shader: $NEW_SHADER"
+notify-send "Shader switched" "$NEW_SHADER"

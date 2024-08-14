@@ -1,3 +1,4 @@
+
 #!/bin/sh
 
 # List of directories to stow
@@ -16,12 +17,12 @@ directories=(
 )
 
 # Function to stow directories
-stow_directories() {
+unstow_directories() {
   for dir in "${directories[@]}"; do
-    echo "Stowing $dir..."
-    stow $dir
+    echo "Unstowing $dir..."
+    stow -D $dir
   done
 }
 
 # Run the stow function
-stow_directories
+unstow_directories

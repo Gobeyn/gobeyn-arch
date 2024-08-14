@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Get random wallpaper from the $HOME/wallpapers directory
-WALLPAPERS_DIR="$HOME/wallpapers/"
-RANDOM_WALLPAPER=$(ls "$WALLPAPER_DIR" | shuf -n 1)
+WALLPAPERS_DIR="$HOME/wallpapers"
+RANDOM_WALLPAPER=$(ls "$WALLPAPERS_DIR" | shuf -n 1)
 WALLPAPERPATH="$WALLPAPERS_DIR/$RANDOM_WALLPAPER"
 
 # Save the new wallpaper information
@@ -36,3 +36,6 @@ done < "$INFILE"
 hyprctl hyprpaper unload all
 hyprctl hyprpaper preload "$WALLPAPERPATH"
 hyprctl hyprpaper wallpaper ",$WALLPAPERPATH"
+
+# Notification
+notify-send "Wallpaper changed" "$WALLPAPERPATH"

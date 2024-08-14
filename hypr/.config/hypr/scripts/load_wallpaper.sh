@@ -31,3 +31,6 @@ done < "$INFILE"
 hyprctl hyprpaper unload all
 hyprctl hyprpaper preload "$WALLPAPERPATH"
 hyprctl hyprpaper wallpaper ",$WALLPAPERPATH"
+
+# Notification
+notify-send "Reloaded wallpaper"
