@@ -10,8 +10,8 @@
 
 [global] 
 follow = none
-width = 300
-height = 60
+width = 400
+height = 100
 origin = bottom-right
 offset = (0,0)
 indicate_hidden = yes

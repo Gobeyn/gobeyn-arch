@@ -37,5 +37,9 @@ hyprctl hyprpaper unload all
 hyprctl hyprpaper preload "$WALLPAPERPATH"
 hyprctl hyprpaper wallpaper ",$WALLPAPERPATH"
 
+# Reload waybar
+killall waybar
+waybar & disown
+
 # Notification
 notify-send "Wallpaper changed" "$WALLPAPERPATH"
