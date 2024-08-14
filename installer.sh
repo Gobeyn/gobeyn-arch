@@ -16,6 +16,7 @@ run_script() {
 SCRIPTS=(
   "./install/pacman-install.sh"
   "./install/yay-install.sh"
+  "./install/crust-install.sh"
   "./install/zsh-default.sh"
   "./install/setup-sddm.sh"
   "./install/backup.sh"
