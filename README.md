@@ -101,7 +101,7 @@ $ sudo pacman -S git
 ```
 Then, clone the repository:
 ```
-$ git clone [...]
+$ git clone https://github.com/Gobeyn/gobeyn-arch.git
 ```
 
 ### Installing packages and Symlinking dotfiles
