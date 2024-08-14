@@ -17,14 +17,15 @@
 * ------------------------------*/
 
 * {
-  font-family: "JetBrainsMono Nerd Font, JetBransMonoNF";
+  font-family: DaddyTimeMono Nerd Font;
   background-image: none;
   box-shadow: none;
   transition: 20ms;
 }
 
 window {
-  background: url("file:///home/aaron/.config/wallpapers/Interstellar-Blackhole-Noise-Blurred.png");
+  /*The background is a direct filepath and is user dependent!*/
+  background: url("file:///home/aaron/wallpapers/Anime-Girl2.png");
   background-size: cover;
 }
 

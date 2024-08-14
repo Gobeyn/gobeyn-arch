@@ -20,6 +20,7 @@ SCRIPTS=(
   "./install/setup-sddm.sh"
   "./install/backup.sh"
   "./install/wallpaper.sh"
+  "./install/create-info-files.sh"
   "./install/stow-dotfiles.sh"
 )
 

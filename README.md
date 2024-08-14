@@ -118,6 +118,7 @@ This installation script does a few things:
 - Install all the `pacman` installable packages required.
 - Install the `yay` AUR-helper.
 - Install all the `aur` packages we need with `yay`.
+- Setup directories and files for certain packages used by the installation.
 - Symlink the configuration dotfiles with `stow`. This is the reason 
     we needed to backup any existing ones, so conflict is avoided.
 
@@ -134,9 +135,8 @@ installed and your GPU may or may not be functional. You will need to
 look this up online for your particular use case. The following contains
 a list of files/programs that can benefit from GPU acceleration:
 
-- Hyprland: [...]
-- Firefox: [...]
-
+- Hyprland: See: ./hypr/.config/hypr/hypr-configs/hypr_general.conf and 
+    Hyprland documentation.
 ### Direct paths in configurations
 
 Certain files, mainly `.css` files, need direct file paths and do not 
@@ -145,7 +145,8 @@ a list of configuration files where you will manually need to change
 file paths:
 
 - Waybar: See ./waybar/.config/waybar/style.css
-- Wlogout: See ./wlogout/.config/wlogout/style.css
+- Wlogout: See ./wlogout/.config/wlogout/style.css, in this file there 
+    are multiple direct file paths to icons and background.
 
 ### Sddm themes
 

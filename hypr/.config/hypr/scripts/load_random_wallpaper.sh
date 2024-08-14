@@ -1,7 +1,12 @@
 #!/bin/sh
 
-# Get the current wallpaper path
-WALLPAPERPATH=$(cat "$HOME/.wallpaper.info")
+# Get random wallpaper from the $HOME/wallpapers directory
+WALLPAPERS_DIR="$HOME/wallpapers/"
+RANDOM_WALLPAPER=$(ls "$WALLPAPER_DIR" | shuf -n 1)
+WALLPAPERPATH="$WALLPAPERS_DIR/$RANDOM_WALLPAPER"
+
+# Save the new wallpaper information
+echo "$WALLPAPERPATH" > "$HOME/.wallpaper.info"
 
 # Generate colorscheme based on the wallpaper with Pywal
 wal -i $WALLPAPERPATH
