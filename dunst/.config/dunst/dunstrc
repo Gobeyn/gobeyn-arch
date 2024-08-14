@@ -5,7 +5,7 @@
 #|____/ \__,_|_| |_|___/\__|
 # 
 # Author: Aaron Gobeyn
-# Date: August 13th 2024
+# Date: August 14th 2024
 # Documentation: https://github.com/dunst-project/dunst/blob/master/docs/dunst.5.pod
 
 [global] 
@@ -57,7 +57,7 @@ title = Dunst
 class = Dunst
 startup_notification = false
 verbosity = mesg
-corner_radius = 15
+corner_radius = 5
 ignore_dbusclose = false
 mouse_left_click = close_current
 mouse_middle_click = do_action
