@@ -200,5 +200,6 @@ udisksctl unmount -b /dev/sdxy
 ### Firefox plugins
 
 For a better experience with `firefox` we suggest installing some plugins. The most important one being `uBlock` which blocks adds, including 
-add on `YouTube`. We also recommend using `Dark Reader` which will turn any page into dark mode. You can also change the theme of Firefox, see the 
+add on `YouTube`. We also recommend using `Dark Reader` which will turn any page into dark mode. Lastly, because we are using `pipewire`, we also 
+need the `Pipewire Screenaudio` extension so apps like `discord` can be used properly from the browser. You can also change the theme of Firefox, see the 
 settings for a link to a URL with various themes. We are using the `praise the sun` theme.
