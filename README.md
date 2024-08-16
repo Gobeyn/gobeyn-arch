@@ -139,10 +139,13 @@ look this up online for your particular use case. The following contains
 a list of files/programs that can benefit from GPU acceleration:
 
 - Hyprland: See: ./hypr/.config/hypr/hypr-configs/hypr_general.conf and 
-    Hyprland documentation. Currently we are using an integrated AMD GPU 
-    for Hyprland rendering, and we have commented out the lines for a 
-    dedicated Nvidia GPU. It is generally advised by the Hyprland 
-    documentation to use the integrated GPU for Hyprland rendering.
+    Hyprland documentation. We encountered issues when using the integrated 
+    GPU with a second monitor. The current configuration uses the integrated GPU 
+    by default, but if that doesn't work, falls back on the dedicated Nvidia GPU.
+    However, we noticed that if we boot the laptop without the second monitor attached, 
+    then it does not render properly, but if we boot with the second monitor already 
+    plugged in, then it works as expected. We think this has to do with the GPU fallback,
+    but we're not sure.
 - Video rendering, for instance in your browser.
 ### Direct paths in configurations
 
