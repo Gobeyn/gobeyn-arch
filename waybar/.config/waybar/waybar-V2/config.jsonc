@@ -103,11 +103,10 @@
     "format": "{icon}",
     "tooltip": true,
     "tooltip-format": "{desc} ({volume}%)",
-    "format-bluetooth": "󰂰",
+    "format-bluetooth": "{icon}󰂯",
     "format-muted": "",
     "format-icons": {
-      "headset": "󱡬",
-      "jack": "󱡬",
+      "headphone": "",
       "default": ["",""]
     }
   },
