@@ -19,6 +19,7 @@ SCRIPTS=(
   "./install/crust-install.sh"
   "./install/zsh-default.sh"
   "./install/setup-sddm.sh"
+  "./install/spotify-wayland.sh"
   "./install/backup.sh"
   "./install/wallpaper.sh"
   "./install/create-info-files.sh"

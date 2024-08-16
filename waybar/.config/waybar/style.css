@@ -83,6 +83,17 @@ window#waybar.empty #window {
   color: @background;
 }
 
+/*MPRIS*/
+#mpris {
+  font-size: 8;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: @color5;
+  color: @background;
+  border-radius: 5px 5px 5px 5px;
+}
+
 /*First Arrow*/
 #custom-arrow1 {
   font-size: 16pt;
@@ -136,7 +147,7 @@ window#waybar.empty #window {
 
 #pulseaudio-slider trough {
   min-height: 1px;
-  min-width: 75px;
+  min-width: 50px;
   border-radius: 5px;
   background-color: @foreground;
 }
@@ -168,7 +179,7 @@ window#waybar.empty #window {
   background: @color1;
   border-radius: 5px 0 0 5px;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 #custom-update.green {

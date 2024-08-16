@@ -17,7 +17,8 @@
   // Module settings
   "modules-left": [
     "hyprland/workspaces",
-    "wlr/taskbar"
+    "wlr/taskbar",
+    "mpris"
   ],
   "modules-center": [
     "custom/arrow1",
@@ -48,9 +49,42 @@
     "tooltip": "{name}",
     "icon-size": 12
   },
+  "mpris": {
+    "format": "{status_icon} {dynamic}",
+    "tooltip-format": "{player} ({status}) {dynamic}",
+    "interval": 1,
+	  "format-paused": "{status_icon} <i>{dynamic}</i>",
+	  "player-icons": {
+		  "default": "▶",
+		  "mpv": "🎵",
+      "spotify": "",
+      "firefox": ""
+	  },
+	  "status-icons": {
+      "playing": "▶",
+		  "paused": ""
+	  },
+    "dyanamic-order": [
+      "title",
+      "artist",
+      "position",
+      "length",
+      "album"
+    ],
+    "dynamic-importance-order": [
+      "title",
+      "artists",
+      "position",
+      "length",
+      "album"
+    ],
+    "dynamic-len": 40,
+    "title-len": 25,
+    "author-len": 15
+  },
   // Clock
   "clock": {
-    "format": "<span weight='bold'>{:%A, %B %d %Y, %H:%M:%S}</span>",
+    "format": "<span weight='bold'>{:%a, %b %d %Y, %H:%M:%S}</span>",
     "interval": 1
   },
   // Temperature
@@ -73,6 +107,7 @@
     "format-muted": "",
     "format-icons": {
       "headset": "󱡬",
+      "jack": "󱡬",
       "default": ["",""]
     }
   },
@@ -83,10 +118,10 @@
   },
   // Network
   "network": {
-    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-wifi": "  {essid}",
     "format-ethernet": "  {ifname}",
     "format-disconnected": "",
-    "tooltip-format": "{ipaddr}"
+    "tooltip-format": "{essid} ({signalStrength}%) | {ipaddr}"
   },
   // Battery
   "battery": {

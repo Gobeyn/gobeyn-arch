@@ -118,7 +118,10 @@ This installation script does a few things:
 - Install all the `pacman` installable packages required.
 - Install the `yay` AUR-helper.
 - Install all the `aur` packages we need with `yay`.
-- Setup directories and files for certain packages used by the installation.
+- Setup directories and files for certain packages used by the installation. For instance, 
+    files need to be copied to root directories for `sddm` to look like we want it too and 
+    a line needs to be added to a root access file for `spotify-launcher` to load correctly in
+    `wayland`.
 - Symlink the configuration dotfiles with `stow`. This is the reason 
     we needed to backup any existing ones, so conflict is avoided.
 
@@ -168,7 +171,7 @@ desired wallpaper. Note, however, that the image must be locally located in the 
 The `hyprland` window manager is a `wayland` compositor. Many programs 
 still use the older `X11` compositor. Keep this in mind when installing
 programs, it may occasionally be required to add additional flags 
-for the programs to render correctly (for example `spotify-launcher`).
+for the programs to render correctly.
 
 ### Symlink issues
 
