@@ -1,0 +1,229 @@
+//__        __          _                
+//\ \      / /_ _ _   _| |__   __ _ _ __ 
+// \ \ /\ / / _` | | | | '_ \ / _` | '__|
+//  \ V  V / (_| | |_| | |_) | (_| | |   
+//   \_/\_/ \__,_|\__, |_.__/ \__,_|_|   
+//                |___/                  
+//Author: Aaron Gobeyn
+//Date: August 13th 2024
+//Documentation: 
+//Documentation: https://github.com/Alexays/Waybar
+{
+  // ------------------------------
+  // General settings             
+  // ------------------------------
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  // ------------------------------
+  // Module settings             
+  // ------------------------------
+  "modules-left": [
+    "custom/logo",
+    "custom/separatordots",
+    "clock",
+    "custom/spacing",
+    "disk",
+    "custom/separatorslash",
+    "memory",
+    "custom/separatorslash", 
+    "cpu",
+    "custom/separatorslash",
+    "temperature"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "backlight",
+    "custom/separatorslash",
+    "pulseaudio",
+    "custom/separatorslash",
+    "network",
+    "custom/separatorslash",
+    "battery",
+    "custom/spacing",
+    "custom/updates",
+    "custom/separatordots",
+    "custom/logout"
+  ],
+  // ------------------------------
+  // Workspaces            
+  // ------------------------------
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "<span font='14' color='#5E9A3C'></span>",
+      "2": "<span font='14' color='#ff2400'></span>",
+      "3": "<span font='14' color='#1DD05D'></span>",
+      //"4": "<span font='14' color='#8b0000'></span>",
+      "4": "<span font='14' color='#8b0000'>󰍹</span>",
+      "5": "<span font='14' color='#0f52ba'>󱢴</span>",
+      "6": "<span font='14' color='#D27D2D'></span>",
+      "active": "<span font='14' color='#00CADF'></span>",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": [1,2,3,4,5,6]
+    }
+  },
+  // ------------------------------
+  // Custom modules            
+  // ------------------------------
+  "custom/logo": {
+    "format": "<span font='8'> </span>",
+    "tooltip": false
+  },
+  "custom/spacing": {
+    "format": " ",
+    "tooltip": false
+  },
+  "custom/separatordots": {
+    "format": "󰇝",
+    "tooltip": false
+  },
+  "custom/separatorslash": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/updates": {
+    "format": " {}",
+    "tooltip": false,
+    "escape": true,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/count_updates.sh",
+    "restart-interval": 60
+  },
+  "custom/logout": {
+    "format": "<span weight='bold'></span>",
+    "tooltip": false,
+    "on-click": "wlogout"
+  },
+  // ------------------------------
+  // Clock
+  // ------------------------------
+  "clock": {
+    "format": "  <span weight='bold'>{:%H:%M:%S}</span>",
+    "interval": 1,      
+    "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar-weeks-pos": "right",
+    "today-format": "<span color='#7645AD'><b><u>{}</u></b></span>",
+    "format-calendar": "<span color='#aeaeae'><b>{}</b></span>",
+    "format-calendar-weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
+    "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>" 
+  },
+  // ------------------------------
+  // Disk (hardrive storage)
+  // ------------------------------
+  "disk": {
+    "interval": 30,
+    "format": " {percentage_used}%",
+    "path": "/home",
+    "rotate": 10
+  },
+  // ------------------------------
+  // Memory (RAM usage)
+  // ------------------------------
+  "memory": {
+    "format": " {percentage}%",
+    "rotate": 10
+  },
+  // ------------------------------
+  // CPU usage  
+  // ------------------------------
+  "cpu": {
+    "interval": 1,
+    "format": "<span weight='bold'>CPU</span> {usage}%",
+    "rotate": 10
+  },
+  // ------------------------------
+  // CPU Temperature
+  // ------------------------------
+  "temperature": {
+    "format": "{icon} {temperatureC}<span font='3'> </span>󰔄",            
+    "format-critical": "<span font='16' color='#FF2400'></span> {temperatureC}<span font='3'> </span>󰔄",
+    "interval": 1,
+    "critical-threshold": 80,
+    "format-icons": ["<span font='16' color='#1F51FF'></span>",
+                     "<span font='16' color='#5746BF'></span>",
+                     "<span font='16' color='#8F3B80'></span>",
+                     "<span font='16' color='#C72F40'></span>"],
+    "rotate": 10
+  },
+  // ------------------------------
+  // Backlight
+  // ------------------------------
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "rotate": 10
+  },
+  // ------------------------------
+  // Audio 
+  // ------------------------------
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth":"󰂰",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "bluetooth": "󰥰",
+      "handsfree": "",
+      "headset": "󱡬",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["",""]
+    },
+    "justify": "center",
+    "tooltip-format": "{icon}  {volume}%",
+    "rotate": 10
+  },
+  // ------------------------------
+  // Network 
+  // ------------------------------ 
+  "network": {
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet":" ",
+    "format-disconnected": "",
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
+    "tooltip-format-ethernet": "{ifname}   | {ipaddr}",
+    "rotate": 10
+  },
+  // ------------------------------
+  // Battery 
+  // ------------------------------ 
+  "battery": {
+    "interval": 1, 
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "<span color='#DAA520'>󰂄</span> {capacity}%",
+    "format-plugged": "<span color='#355E3B'> </span> {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "<span color='#FF2400'>󰁻</span>",
+      "<span color='#FF2400'>󰁼</span>",
+      "<span color='#FF2400'>󰁾</span>",
+      "<span color='#355E3B'>󰂀</span>",
+      "<span color='#355E3B'>󰂂</span>",
+      "<span color='#355E3B'>󰁹</span>"
+    ],
+    "rotate": 10
+  }
+}
