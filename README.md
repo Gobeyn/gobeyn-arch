@@ -136,7 +136,10 @@ look this up online for your particular use case. The following contains
 a list of files/programs that can benefit from GPU acceleration:
 
 - Hyprland: See: ./hypr/.config/hypr/hypr-configs/hypr_general.conf and 
-    Hyprland documentation.
+    Hyprland documentation. Currently we are using an integrated AMD GPU 
+    for Hyprland rendering, and we have commented out the lines for a 
+    dedicated Nvidia GPU. It is generally advised by the Hyprland 
+    documentation to use the integrated GPU for Hyprland rendering.
 - Video rendering, for instance in your browser.
 ### Direct paths in configurations
 
