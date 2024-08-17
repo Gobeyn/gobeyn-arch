@@ -118,6 +118,7 @@ This installation script does a few things:
 - Install all the `pacman` installable packages required.
 - Install the `yay` AUR-helper.
 - Install all the `aur` packages we need with `yay`.
+- Install personal projects [`crust`](https://github.com/Gobeyn/crust) and ['dumpling'](https://github.com/Gobeyn/dumpling).
 - Setup directories and files for certain packages used by the installation. For instance, 
     files need to be copied to root directories for `sddm` to look like we want it too and 
     a line needs to be added to a root access file for `spotify-launcher` to load correctly in
