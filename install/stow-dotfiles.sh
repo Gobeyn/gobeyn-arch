@@ -3,6 +3,7 @@
 # List of directories to stow
 directories=(
   "dunst"
+  "dumpling"
   "fuzzel"
   "hypr"
   "kitty"
