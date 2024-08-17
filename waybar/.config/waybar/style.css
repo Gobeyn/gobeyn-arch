@@ -75,6 +75,10 @@ window#waybar.empty #window {
   background: @color4;
 }
 
+#taskbar.empty {
+  background: transparent;
+}
+
 #taskbar button.active {
   border-radius: 5px 5px 5px 5px;
   margin-top: 2px;
