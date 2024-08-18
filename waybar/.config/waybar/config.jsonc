@@ -26,6 +26,7 @@
     "custom/arrow2"
   ],
   "modules-right": [
+    "disk",
     "temperature",
     "pulseaudio",
     "pulseaudio/slider",
@@ -86,6 +87,15 @@
   "clock": {
     "format": "<span weight='bold'>{:%a, %b %d %Y, %H:%M:%S}</span>",
     "interval": 1
+  },
+  // Disk
+  "disk": {
+    "format": " ({used})",
+    "unit": "GiB",
+    "path": "/home",
+    "interval": 30,
+    "tooltip": true,
+    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
   },
   // Temperature
   "temperature": {
