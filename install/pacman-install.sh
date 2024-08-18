@@ -33,6 +33,7 @@ PACKAGES=(
   "python-pywal"
   "qt5-wayland"
   "qt6-wayland"
+  "ripgrep"
   "rustup"
   "stow"
   "spotify-launcher"
