@@ -86,7 +86,8 @@
   // Clock
   "clock": {
     "format": "<span weight='bold'>{:%a, %b %d %Y, %H:%M:%S}</span>",
-    "interval": 1
+    "interval": 1,
+    "tooltip": false
   },
   // Disk
   "disk": {
