@@ -10,7 +10,7 @@
 # Documentation: https://github.com/Gobeyn/dumpling
 
 [general]
-load_size = 30
+load_size = 22
 pdf_viewer = "zathura"
 selection_icon = ""
 
