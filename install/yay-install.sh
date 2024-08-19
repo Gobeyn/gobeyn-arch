@@ -28,6 +28,7 @@ PACKAGES=(
   "fuzzel"
   "wlogout"
   "sddm-sugar-dark"
+  "qview"
 )
 
 install_aur_packages() {
