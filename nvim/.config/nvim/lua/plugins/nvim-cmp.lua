@@ -21,6 +21,7 @@ return {
 		"saadparwaiz1/cmp_luasnip", -- Autocompletion
 		"rafamadriz/friendly-snippets", -- More snippets
 		"onsails/lspkind.nvim", -- Vs-code like pictograms
+		"jc-doyle/cmp-pandoc-references", -- Code completion for *.bib files.
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -49,6 +50,7 @@ return {
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
+				{ name = "pandoc_references" },
 			}),
 			formatting = {
 				format = lspkind.cmp_format({
