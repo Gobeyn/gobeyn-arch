@@ -62,6 +62,9 @@ ignore_dbusclose = false
 mouse_left_click = close_current
 mouse_middle_click = do_action
 mouse_right_click = do_action
+icon_path = ""
+icon_position = left
+max_icon_size = 64
 
 [urgency_normal]
 background = "#393552"
