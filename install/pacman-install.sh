@@ -63,7 +63,7 @@ install_packages() {
     sudo pacman -S --noconfirm --needed "$package"
   done
 
-  echo "All packages have been installed."
+  echo "All pacman packages have been installed."
 }
 
 # Run the function

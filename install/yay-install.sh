@@ -38,6 +38,7 @@ install_aur_packages() {
     for package in "${PACKAGES[@]}"; do
       yay -S --noconfirm --needed "$package"
     done
+    echo "All yay packages have been installed."
   else
     echo "Could not install AUR packages, yay was not found."
   fi

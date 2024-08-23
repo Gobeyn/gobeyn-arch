@@ -36,6 +36,7 @@ return {
 				"vimdoc",
 				"c",
 				"regex",
+				"latex",
 			},
 		})
 	end,

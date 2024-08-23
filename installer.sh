@@ -18,6 +18,7 @@ SCRIPTS=(
   "./install/yay-install.sh"
   "./install/crust-install.sh"
   "./install/dumpling-install.sh"
+  "./install/npm-install.sh"
   "./install/zsh-default.sh"
   "./install/setup-sddm.sh"
   "./install/spotify-wayland.sh"
