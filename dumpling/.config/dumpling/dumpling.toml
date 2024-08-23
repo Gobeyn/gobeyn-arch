@@ -10,7 +10,6 @@
 # Documentation: https://github.com/Gobeyn/dumpling
 
 [general]
-load_size = 22
 pdf_viewer = "zathura"
 selection_icon = ""
 editor_command = "kitty --detach nvim"
