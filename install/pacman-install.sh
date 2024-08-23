@@ -16,6 +16,7 @@ PACKAGES=(
   "fzf"
   "git"
   "hyprpaper"
+  "lazygit"
   "man-db"
   "mpv"
   "neovim"
