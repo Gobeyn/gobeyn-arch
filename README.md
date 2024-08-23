@@ -26,35 +26,35 @@ way is to simply plug in an ethernet cable. If this is not an option,
 `iwd` and `iwctl` should already be present on your machine and 
 can be used to connect to a Wi-Fi network. The Wi-Fi devices on your 
 machine can be listed with:
-```
-$ iwctl device list
+```bash
+iwctl device list
 ```
 If the device and/or its corresponding adapter is turned off, you will 
 first need to turn it on:
-```
-$ iwctl device NAME set-property Powered on
-$ iwctl device ADAPTER set-property Powered on
+```bash
+iwctl device NAME set-property Powered on
+iwctl device ADAPTER set-property Powered on
 ```
 Typically `NAME` is `wlan0` and `ADAPTER` is `phy0`, though this may 
 differ and the names listed previously should be used. Next, we scan 
 for networks with the Wi-Fi device:
-```
-$ iwctl station NAME scan
+```bash
+iwctl station NAME scan
 ```
 and list all the available networks:
-```
-$ iwctl station NAME get-networks
+```bash
+iwctl station NAME get-networks
 ```
 Finally, if the network you want to connect to is listed, we can 
 connect to it:
-```
-$ iwctl station NAME connect SSID password PASSWORD
+```bash
+iwctl station NAME connect SSID password PASSWORD
 ```
 
 You can check if your Wi-Fi or ethernet connection 
 is functional by running:
-```
-$ ping www.example.com
+```bash
+ping www.example.com
 ```
 and seeing that data packets do in fact arrive. To interrupt `ping`, 
 press `Ctrl+c`.
@@ -81,12 +81,12 @@ After the installation and logging into your system, it may be possible
 you do not have Wi-Fi connection again. Fortunately, we installed 
 [`NetworkManager`](https://wiki.archlinux.org/title/NetworkManager) during
 install, which replaces `iwctl`. To find nearby Wi-Fi networks run:
-```
-$ nmcli device wifi list
+```bash
+nmcli device wifi list
 ```
 and to connect to a network:
-```
-$ nmcli device wifi connect SSID password PASSWORD
+```bash
+nmcli device wifi connect SSID password PASSWORD
 ```
 
 ## Configuring the install
@@ -96,20 +96,20 @@ $ nmcli device wifi connect SSID password PASSWORD
 In order to access the installation and configuration scripts in the 
 repository, it will need to be cloned. By default, `git` will not be 
 installed, so install it first with the `pacman` package manager:
-```
-$ sudo pacman -S git
+```bash
+sudo pacman -S git
 ```
 Then, clone the repository:
-```
-$ git clone https://github.com/Gobeyn/gobeyn-arch.git
+```bash
+git clone https://github.com/Gobeyn/gobeyn-arch.git
 ```
 
 ### Installing packages and Symlinking dotfiles
 
 First, `cd` into the cloned GitHub repository, then we install and 
 set everything up with:
-```
-$ ./installer.sh
+```bash
+./installer.sh
 ```
 This installation script does a few things:
 
@@ -118,7 +118,7 @@ This installation script does a few things:
 - Install all the `pacman` installable packages required.
 - Install the `yay` AUR-helper.
 - Install all the `aur` packages we need with `yay`.
-- Install personal projects [`crust`](https://github.com/Gobeyn/crust) and ['dumpling'](https://github.com/Gobeyn/dumpling).
+- Install personal projects [`crust`](https://github.com/Gobeyn/crust) and [`dumpling`](https://github.com/Gobeyn/dumpling).
 - Setup directories and files for certain packages used by the installation. For instance, 
     files need to be copied to root directories for `sddm` to look like we want it too and 
     a line needs to be added to a root access file for `spotify-launcher` to load correctly in
@@ -162,8 +162,8 @@ file paths:
 ### Sddm themes
 
 The available `sddm` themes on your system are listed in `/usr/share/sddm/themes/`, to test a particular theme run
-```
-$ sddm-greeter --test-theme --theme /usr/share/sddm/themes/THEME
+```bash
+sddm-greeter --test-theme --theme /usr/share/sddm/themes/THEME
 ```
 During the install `sugar-dark` was installed, so you should be able to test it out by replacing `THEME` with `sugar-dark`.
 At the same time you will be able to check that the install for the greeter ran correctly. To change the default wallpaper of 
@@ -193,7 +193,7 @@ In order to move files from and to a USB device, external hard drive, etc.
 we need to mount the device first. The tool we use for this is 
 `udisksctl`, see the [Arch wiki](https://wiki.archlinux.org/title/Udisks).
 To mount the device we run:
-```
+```bash
 udisksctl mount -b /dev/sdxy
 ```
 where `sdxy` is the typical format for an external storage device where 
@@ -203,7 +203,7 @@ is mounted, a file path will be shown where the contents of the
 storage device can be accessed and information can be written to. When 
 you are finished using the device, it is important that you unmount it 
 first with:
-```
+```bash
 udisksctl unmount -b /dev/sdxy
 ```
 

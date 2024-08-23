@@ -29,11 +29,13 @@ return {
 				"css",
 				"markdown",
 				"markdown_inline",
+				"make",
 				"lua",
 				"vim",
 				"gitignore",
 				"vimdoc",
 				"c",
+				"regex",
 			},
 		})
 	end,
