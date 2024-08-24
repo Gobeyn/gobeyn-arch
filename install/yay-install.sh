@@ -29,6 +29,7 @@ PACKAGES=(
   "wlogout"
   "sddm-sugar-dark"
   "qview"
+  "vesktop-bin"
 )
 
 install_aur_packages() {
