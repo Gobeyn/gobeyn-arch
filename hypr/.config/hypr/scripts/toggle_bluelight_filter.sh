@@ -22,4 +22,5 @@ hyprctl keyword decoration:screen_shader "$NEW_SHADER"
 echo "$NEW_SHADER" > "$HOME/.shader.info"
 
 # Send a notification
-notify-send "Shader switched" "$NEW_SHADER"
+FILENAME=$(basename "$NEW_SHADER")
+notify-send "Shader switched" "$FILENAME"
