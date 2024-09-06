@@ -17,6 +17,7 @@ PACKAGES=(
   "git"
   "hyprpaper"
   "lazygit"
+  "libreoffice-still"
   "man-db"
   "mpv"
   "neovim"
