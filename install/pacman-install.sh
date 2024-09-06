@@ -40,6 +40,7 @@ PACKAGES=(
   "spotify-launcher"
   "texlive"
   "thefuck"
+  "thunderbird"
   "ttf-daddytime-mono-nerd"
   "udisks2"
   "unzip"
