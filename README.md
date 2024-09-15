@@ -214,10 +214,3 @@ add on `YouTube`. We also recommend using `Dark Reader` which will turn any page
 need the `Pipewire Screenaudio` extension so apps like `discord` can be used properly from the browser. You can also change the theme of Firefox, see the 
 settings for a link to a URL with various themes. We are using the `praise the sun` theme.
 
-
-## Planned Changes 
-
-- [ ] Make the background of `wlogout` dependent on the current background. Use something like `magick` to add a Gaussian blur when a new wallpaper 
-    is selected.
-- [ ] Create a dot-directory for this arch installation instead of scattering dot-files in the HOME directory (for instance `.wallpaper.info` and 
-    `.shader.info`).
