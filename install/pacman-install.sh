@@ -19,7 +19,6 @@ PACKAGES=(
   "hyprlock"
   "hyprpaper"
   "imagemagick"
-  "lazygit"
   "libreoffice-still"
   "man-db"
   "mpv"
