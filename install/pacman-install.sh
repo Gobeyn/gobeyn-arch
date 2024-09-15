@@ -16,6 +16,7 @@ PACKAGES=(
   "fzf"
   "git"
   "hyprpaper"
+  "imagemagick"
   "lazygit"
   "libreoffice-still"
   "man-db"

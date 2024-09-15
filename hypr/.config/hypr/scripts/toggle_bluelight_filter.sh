@@ -5,7 +5,7 @@ DEFAULT_SHADER="$HOME/.config/hypr/shaders/default-shader.frag"
 BLUELIGHT_SHADER="$HOME/.config/hypr/shaders/blue-shader.frag"
 
 # Read the current shader.
-CURRENT_SHADER=$(cat "$HOME/.shader.info")
+CURRENT_SHADER=$(cat "$HOME/.gobeyn-arch/shader.info")
 
 # Determine which shader to switch to
 
@@ -19,7 +19,7 @@ fi
 hyprctl keyword decoration:screen_shader "$NEW_SHADER"
 
 # Update the shader info
-echo "$NEW_SHADER" > "$HOME/.shader.info"
+echo "$NEW_SHADER" > "$HOME/.gobeyn-arch/shader.info"
 
 # Send a notification
 FILENAME=$(basename "$NEW_SHADER")

@@ -4,9 +4,10 @@
 WALLPAPERS_DIR="$HOME/wallpapers"
 RANDOM_WALLPAPER=$(ls "$WALLPAPERS_DIR" | shuf -n 1)
 WALLPAPERPATH="$WALLPAPERS_DIR/$RANDOM_WALLPAPER"
+BLURREDWALLPAPER="$HOME/.gobeyn-arch/blurred-wallpaper.png"
 
 # Save the new wallpaper information
-echo "$WALLPAPERPATH" > "$HOME/.wallpaper.info"
+echo "$WALLPAPERPATH" > "$HOME/.gobeyn-arch/wallpaper.info"
 
 # Generate colorscheme based on the wallpaper with Pywal
 wal -i $WALLPAPERPATH
@@ -40,6 +41,9 @@ hyprctl hyprpaper wallpaper ",$WALLPAPERPATH"
 # Reload waybar
 killall waybar
 waybar & disown
+
+# Create blurred wallpaper
+magick "$WALLPAPERPATH" -blur 50x30 "$BLURREDWALLPAPER"
 
 # Notification
 notify-send "Wallpaper changed" "$WALLPAPERPATH"

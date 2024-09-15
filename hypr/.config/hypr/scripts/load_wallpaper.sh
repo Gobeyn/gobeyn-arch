@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Get the current wallpaper path
-WALLPAPERPATH=$(cat "$HOME/.wallpaper.info")
+WALLPAPERPATH=$(cat "$HOME/.gobeyn-arch/wallpaper.info")
+BLURREDWALLPAPER="$HOME/.gobeyn-arch/blurred-wallpaper.png"
 
 # Generate colorscheme based on the wallpaper with Pywal
 wal -i $WALLPAPERPATH
@@ -35,6 +36,9 @@ hyprctl hyprpaper wallpaper ",$WALLPAPERPATH"
 # Reload Waybar
 killall waybar
 waybar & disown
+
+# Create blurred wallpaper
+magick "$WALLPAPERPATH" -blur 50x30 "$BLURREDWALLPAPER"
 
 # Notification
 notify-send "Reloaded wallpaper"
