@@ -16,6 +16,7 @@ run_script() {
 SCRIPTS=(
   "./install/pacman-install.sh"
   "./install/yay-install.sh"
+  "./install/backlight-udev-rule.sh"
   "./install/crust-install.sh"
   "./install/dumpling-install.sh"
   "./install/npm-install.sh"

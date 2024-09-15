@@ -124,8 +124,8 @@ window#waybar.empty #window {
 #disk {
   color: @background;
   background: @color4;
-  padding-left: 10px;
   padding-right: 10px;
+  padding-left: 10px;
   border-radius: 5px 0 0 5px;
 }
 
@@ -134,8 +134,6 @@ window#waybar.empty #window {
   color: @background;
   background: @color4;
   padding-right: 10px;
-  /*padding-left: 10px;*/
-  /*border-radius: 5px 0 0 5px;*/
 }
 
 /*Pulseaudio*/
@@ -186,12 +184,20 @@ window#waybar.empty #window {
   background: @color4;
 }
 
+/*Backlight*/
+#backlight {
+  font-size: 16;
+  color: #ffde21;
+  background: @color1;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 0 0 5px;
+}
+
 /*Updates*/
 #custom-updates {
   color: @background;
   background: @color1;
-  border-radius: 5px 0 0 5px;
-  padding-left: 10px;
   padding-right: 15px;
 }
 

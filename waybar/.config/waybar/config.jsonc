@@ -32,6 +32,7 @@
     "pulseaudio/slider",
     "network",
     "battery",
+    "backlight",
     "custom/updates",
     "custom/logout"
   ],
@@ -153,6 +154,12 @@
       "<span color='#355E3B'>󰂂</span>",
       "<span color='#355E3B'>󰁹</span>"
     ]
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-icons": ["󰛩 ", "󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+    "tooltip": true,
+    "tooltip-format": "{percent}%"
   },
   // Updates
   "custom/updates": {
