@@ -29,7 +29,7 @@ if [[ "$2" == "--continue" ]]; then
     RESPONSE=$(ollama run mistral "$PROMPT")
     # Echo the prompt and response into a Markdown file, note that 
     # we do not need another prompt header
-    echo -e "$PROMPT\n# Response\n$RESPONSE" > "$FILEDIR"
+    echo -e "$PROMPT\n# Response\n$RESPONSE\n" > "$FILEDIR"
     # Remove the old file
     rm "$LATEST_FILE"
   else
@@ -42,7 +42,7 @@ else
   RESPONSE=$(ollama run mistral "$PROMPT")
 
   # Echo the prompt and response into a Markdown file
-  echo -e "# Prompt\n$PROMPT\n# Response\n$RESPONSE" > "$FILEDIR"
+  echo -e "# Prompt\n$PROMPT\n# Response\n$RESPONSE\n" > "$FILEDIR"
 fi
 
 # Display the contents of the Markdown file we just generated.
