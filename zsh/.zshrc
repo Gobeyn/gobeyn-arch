@@ -77,6 +77,7 @@ alias cat='bat'
 alias ls='exa -a --icons' 
 alias fzf='fzf -m --preview="bat --color=always {}"'
 alias fzfnvim='nvim $(fzf -m --preview="bat --color=always {}")'
+alias llm='~/.gobeyn-arch/llm_runner.sh'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -27,6 +27,7 @@ SCRIPTS=(
   "./install/wallpaper.sh"
   "./install/create-info-files.sh"
   "./install/stow-dotfiles.sh"
+  "./install/ollama-install.sh"
 )
 
 # Run the scripts

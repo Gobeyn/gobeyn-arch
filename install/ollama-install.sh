@@ -1,7 +1,12 @@
 #!/bin/sh
 
-# This file should not be included in `installer.sh`, we should only 
-# install `ollama` if the GPU has been configured correctly, which is 
-# user dependent.
+# Install ollama
+curl -fsSL https://ollama.com/install.sh | sh
 
-echo "TODO"
+# Download Mistral, if ollama is installed
+if command -v ollama &> /dev/null 
+then
+  ollama run mistral
+fi
+
+

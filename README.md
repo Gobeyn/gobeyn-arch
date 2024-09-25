@@ -134,6 +134,9 @@ beforehand.
 
 ### GPU acceleration
 
+If you have a dedicated GPU, we highly advice making sure that it is functional 
+before running the installation script.
+
 Depending on your GPU, the right drivers may or may not have been 
 installed and your GPU may or may not be functional. You will need to 
 look this up online for your particular use case. The following contains
@@ -148,6 +151,7 @@ a list of files/programs that can benefit from GPU acceleration:
     plugged in, then it works as expected. We think this has to do with the GPU fallback,
     but we're not sure.
 - Video rendering, for instance in your browser.
+- Ollama: In order to run LLM's locally, GPU acceleration is advised.
 ### Direct paths in configurations
 
 Certain files, mainly `.css` files, need direct file paths and do not 
