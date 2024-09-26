@@ -45,9 +45,9 @@ else
   echo -e "# Prompt\n$PROMPT\n# Response\n$RESPONSE\n" > "$FILEDIR"
 fi
 
-# Display the contents of the Markdown file we just generated.
-bat "$FILEDIR"
-
 # Send notification
 notify-send "LLM Mistral finished writing response."
+
+# Display the contents of the Markdown file we just generated.
+bat "$FILEDIR"
 
