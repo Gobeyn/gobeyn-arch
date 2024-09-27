@@ -44,6 +44,7 @@ PACKAGES=(
   "texlive"
   "thefuck"
   "thunderbird"
+  "tmux"
   "ttf-daddytime-mono-nerd"
   "udisks2"
   "unzip"
