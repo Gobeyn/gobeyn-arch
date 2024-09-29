@@ -38,9 +38,22 @@
   ],
   // Workspaces
   "hyprland/workspaces": {
-    "format": "<span weight='bold'>{name}</span>",
+    "format": "<span weight='bold' size='12pt'>{icon}</span>",
     "sort-by-number": true,
-    "on-click": "activate"
+    "on-click": "activate",
+    "format-icons": {
+      "1": "󰲠",
+      "2": "󰲢",
+      "3": "󰲤",
+      "4": "󰲦",
+      "5": "󰲨",
+      "6": "󰲪",
+      "7": "󰲬",
+      "8": "󰲮",
+      "9": "󰲰",
+      "10": "󰿬",
+      "default": ""
+    }
   },
   // Taskbar
   "wlr/taskbar": {
@@ -52,19 +65,20 @@
     "icon-size": 12
   },
   "mpris": {
-    "format": "{status_icon} {dynamic}",
+    //"format": "{status_icon} {dynamic}",
+    "format": "<span>{status_icon} {artist} - {title}\n{player_icon} {album} {position}|{length}</span>",
+    "format-paused": "<span style='italic'>{status_icon} {artist} - {title}\n{player_icon} {album} {position}|{length}</span>",
     "tooltip-format": "{player} ({status}) {dynamic}",
     "interval": 1,
-	  "format-paused": "{status_icon} <i>{dynamic}</i>",
 	  "player-icons": {
 		  "default": "▶",
 		  "mpv": "🎵",
-      "spotify": "",
-      "firefox": ""
+      "spotify": " ",
+      "firefox": " "
 	  },
 	  "status-icons": {
-      "playing": "▶",
-		  "paused": ""
+      "playing": "<span color='#FFFFFF'>▶</span>",
+		  "paused": "<span color='#FFFFFF'></span>"
 	  },
     "dyanamic-order": [
       "title",
@@ -81,12 +95,19 @@
       "album"
     ],
     "dynamic-len": 40,
-    "title-len": 25,
-    "author-len": 15
+    "title-len": 15,
+    "artist-len": 15,
+    "album-len": 15,
+
+    "player-icons": {
+      "default":"󰝚" ,
+      "spotify": "<span color='#1DB954'></span>",
+      "firefox": "<span color='#F62336'></span>"
+    }
   },
   // Clock
   "clock": {
-    "format": "<span weight='bold'>{:%a, %b %d %Y, %H:%M:%S}</span>",
+    "format": "<span weight='bold'>{:%H:%M:%S\n%A, %d/%m}</span>",
     "interval": 1,
     "tooltip": false
   },

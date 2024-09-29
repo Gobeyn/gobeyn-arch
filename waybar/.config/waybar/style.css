@@ -56,23 +56,26 @@ window#waybar.empty #window {
   border-radius: 5px 5px 5px 5px;
 }
 
-#workspaces button.active {
-  border-radius: 5px 5px 5px 5px;
-  margin-left: 2px;
-  margin-right: 2px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+#workspaces button {
   color: @background;
-  background: @foreground;
+  padding: 0 0.1em;
+  margin: 0.25em;
+}
+
+#workspaces button.active {
+  color: @foreground;
 }
 
 /*Taskbar*/
 #taskbar {
   border-radius: 5px 5px 5px 5px;
   margin-left: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
   background: @color4;
+}
+
+#taskbar.button {
+  margin: 0.25em;
+  padding: 0 0.1em;
 }
 
 #taskbar.empty {
@@ -80,11 +83,7 @@ window#waybar.empty #window {
 }
 
 #taskbar button.active {
-  border-radius: 5px 5px 5px 5px;
-  margin-top: 2px;
-  margin-bottom: 2px;
   background: @foreground;
-  color: @background;
 }
 
 /*MPRIS*/
@@ -107,6 +106,7 @@ window#waybar.empty #window {
 
 /*Clock*/
 #clock {
+  font-size: 8pt;
   background: @foreground;
   border-radius: 1px 1px 1px 1px;
   padding-left: 2px;
