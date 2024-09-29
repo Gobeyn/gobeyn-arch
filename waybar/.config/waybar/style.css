@@ -52,18 +52,18 @@ window#waybar.empty #window {
 }
 
 #workspaces {
-  background: @color1;
+  background: transparent;
   border-radius: 5px 5px 5px 5px;
 }
 
 #workspaces button {
-  color: @background;
+  color: @foreground;
   padding: 0 0.1em;
   margin: 0.25em;
 }
 
 #workspaces button.active {
-  color: @foreground;
+  color: @color1;
 }
 
 /*Taskbar*/
