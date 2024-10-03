@@ -71,6 +71,10 @@ eval "$(thefuck --alias fuck)"
 # Set default editor as nvim
 export EDITOR=nvim
 export QT_QPA_PLATFORM=wayland
+# Adding this resolved QT wayland failed to create display (no such file or directory) issue
+# We're not sure if this should remain here.
+# See: https://stackoverflow.com/questions/49851562/qt-wayland-failed-to-create-display-no-such-file-or-directory
+# export DISPLAY=:0.0
 
 ### Aliases
 alias cat='bat'
