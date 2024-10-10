@@ -12,7 +12,7 @@ install_yay() {
   else
     echo "Installing yay..."
     sudo pacman -S --needed --noconfirm git base-devel
-    git clone https://aur.archlinux/yay.git /tmp/yay
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
     cd /tmp/yay || exit
     makepkg -si --noconfirm
     cd ~ || exit
